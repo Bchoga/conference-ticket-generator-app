@@ -14,19 +14,19 @@ h1 {
 
 @font-face {
   font-family: "Inconsolata";
-  src: url("/assets/fonts/static/Inconsolata-Regular.ttf") format("truetype");
+  src: url("/conference-ticket-generator-app/assets/fonts/static/Inconsolata-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Inconsolata";
-  src: url("/assets/fonts/static/Inconsolata-Bold.ttf") format("truetype");
+  src: url("/conference-ticket-generator-app/assets/fonts/static/Inconsolata-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: bold;
 }
 @font-face {
   font-family: "Inconsolata";
-  src: url("/assets/fonts/static/Inconsolata-ExtraBold.ttf") format("truetype");
+  src: url("/conference-ticket-generator-app/assets/fonts/static/Inconsolata-ExtraBold.ttf") format("truetype");
   font-weight: bolder;
   font-style: normal;
 }
@@ -55,7 +55,7 @@ body {
 }
 
 body {
-  background: url("/assets/images/background-desktop.png") no-repeat center center/cover;
+  background: url("/conference-ticket-generator-app/assets/images/background-desktop.png") no-repeat center center/cover;
 }
 body main {
   height: 100%;
@@ -76,23 +76,23 @@ body main::before {
 body main::before {
   position: fixed;
   z-index: -9;
-  background: url("/assets/images/pattern-squiggly-line-top.svg") no-repeat top right/400px, url("/assets/images/pattern-squiggly-line-bottom-desktop.svg") no-repeat bottom left/900px;
+  background: url("/conference-ticket-generator-app/assets/images/pattern-squiggly-line-top.svg") no-repeat top right/400px, url("/conference-ticket-generator-app/assets/images/pattern-squiggly-line-bottom-desktop.svg") no-repeat bottom left/900px;
 }
 @media (max-width: 1080px) and (min-width: 768px) {
   body {
-    background: url("/assets/images/background-tablet.png") no-repeat center center/cover;
+    background: url("/conference-ticket-generator-app/assets/images/background-tablet.png") no-repeat center center/cover;
   }
   body main::before {
     position: fixed;
-    background: url("/assets/images/pattern-squiggly-line-top.svg") no-repeat top right/300px, url("/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg") no-repeat bottom left/800px;
+    background: url("/conference-ticket-generator-app/assets/images/pattern-squiggly-line-top.svg") no-repeat top right/300px, url("/conference-ticket-generator-app/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg") no-repeat bottom left/800px;
   }
 }
 @media (max-width: 767px) {
   body {
-    background: url("/assets/images/background-mobile.png") no-repeat center center/cover;
+    background: url("/conference-ticket-generator-app/assets/images/background-mobile.png") no-repeat center center/cover;
   }
   body main::before {
-    background: url("/assets/images/pattern-squiggly-line-top.svg") no-repeat top right/100px, url("/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg") no-repeat bottom left/400px;
+    background: url("/conference-ticket-generator-app/assets/images/pattern-squiggly-line-top.svg") no-repeat top right/100px, url("/conference-ticket-generator-app/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg") no-repeat bottom left/400px;
   }
   body .hero {
     margin-top: 30px;
@@ -111,7 +111,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url("/assets/images/pattern-lines.svg") repeat;
+  background: url("/conference-ticket-generator-app/assets/images/pattern-lines.svg") repeat;
   pointer-events: none;
   z-index: 0;
 }
