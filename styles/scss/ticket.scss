@@ -1,0 +1,119 @@
+@import 'common';
+
+.hero-text .user-name {
+    color: transparent;
+    background-image: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.user-email{
+    color:$orange500;
+}
+
+.ticket-wrapper {
+    min-width: 300px;
+    max-width: 80%;
+    margin-top: 60px;
+}
+
+.ticket {
+    @include flexCenter(column);
+    width: 100%;
+
+    &>img {
+        width: 100%;
+    }
+}
+
+.ticket-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    @include flexCenter(column);
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.logo {
+    @include flexCenter(row);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo-text {
+    margin-left: 10px;
+}
+
+.date-location {
+    margin-top: 10px;
+    margin-left: 50px;
+    color: $neutral300;
+}
+
+.user {
+    margin-top: auto;
+
+    &>img {
+        min-width: 48px;
+        width: 54px;
+        aspect-ratio: 1;
+        border-radius: 12px;
+    }
+
+    @include flexCenter(row);
+    justify-self: flex-start;
+}
+
+.info {
+    @include flexCenter(column);
+    padding-left: 10px;
+    align-items: flex-start;
+}
+
+.git-info {
+    @include flexCenter(row);
+    gap: 10px;
+}
+
+.ticket-number {
+    position: absolute;
+    transform: rotate(90deg);
+    right: 1%;
+    color: $neutral500;
+    font-size: 24px;
+}
+
+
+@media (min-width: 1080px) {
+    .user>img{
+        width: 72px;
+    }
+    .name{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1080px) and (min-width: 768px) {
+    .user>img{
+        width: 72px;
+    }
+    .name{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px){
+    .date-location{
+        margin-top: 3px;
+        font-size: 13px;
+    }
+}
+
+
+.hidden{
+    display: none;
+}

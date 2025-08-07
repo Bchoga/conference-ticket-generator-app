@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  outline: none;
+  position: relative;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/assets/fonts/static/Inconsolata-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/assets/fonts/static/Inconsolata-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/assets/fonts/static/Inconsolata-ExtraBold.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+.hero {
+  margin-top: 100px;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.hero-text-support {
+  margin-top: 25px;
+  font-size: 24px;
+  color: hsl(252, 6%, 83%);
+  text-align: center;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  color: hsl(0, 0%, 100%);
+  font-family: inconsolata, sans-serif;
+}
+
+body {
+  background: url("/assets/images/background-desktop.png") no-repeat center center/cover;
+}
+body main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: normal;
+}
+body main::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+body main::before {
+  position: fixed;
+  z-index: -9;
+  background: url("/assets/images/pattern-squiggly-line-top.svg") no-repeat top right/400px, url("/assets/images/pattern-squiggly-line-bottom-desktop.svg") no-repeat bottom left/900px;
+}
+@media (max-width: 1080px) and (min-width: 768px) {
+  body {
+    background: url("/assets/images/background-tablet.png") no-repeat center center/cover;
+  }
+  body main::before {
+    position: fixed;
+    background: url("/assets/images/pattern-squiggly-line-top.svg") no-repeat top right/300px, url("/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg") no-repeat bottom left/800px;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    background: url("/assets/images/background-mobile.png") no-repeat center center/cover;
+  }
+  body main::before {
+    background: url("/assets/images/pattern-squiggly-line-top.svg") no-repeat top right/100px, url("/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg") no-repeat bottom left/400px;
+  }
+  body .hero {
+    margin-top: 30px;
+  }
+  body .hero-text {
+    font-size: 32px;
+  }
+  body .hero-text-support {
+    font-size: 20px;
+  }
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("/assets/images/pattern-lines.svg") repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+header {
+  width: 100%;
+}
+header .header-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.hero,
+.avatar-upload-section,
+.user-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-form * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+}
+.user-form .submit-button-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle1 {
+  position: fixed;
+  top: -80px;
+  left: 30px;
+}
+
+.circle2 {
+  position: fixed;
+  top: 60vh;
+  left: 80vw;
+}
+
+.hero-text .user-name {
+  color: transparent;
+  background-image: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.user-email {
+  color: hsl(7, 88%, 67%);
+}
+
+.ticket-wrapper {
+  min-width: 300px;
+  max-width: 80%;
+  margin-top: 60px;
+}
+
+.ticket {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.ticket > img {
+  width: 100%;
+}
+
+.ticket-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logo-text {
+  margin-left: 10px;
+}
+
+.date-location {
+  margin-top: 10px;
+  margin-left: 50px;
+  color: hsl(252, 6%, 83%);
+}
+
+.user {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-start;
+}
+.user > img {
+  min-width: 48px;
+  width: 54px;
+  aspect-ratio: 1;
+  border-radius: 12px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  align-items: flex-start;
+}
+
+.git-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.ticket-number {
+  position: absolute;
+  transform: rotate(90deg);
+  right: 1%;
+  color: hsl(245, 15%, 58%);
+  font-size: 24px;
+}
+
+@media (min-width: 1080px) {
+  .user > img {
+    width: 72px;
+  }
+  .name {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1080px) and (min-width: 768px) {
+  .user > img {
+    width: 72px;
+  }
+  .name {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .date-location {
+    margin-top: 3px;
+    font-size: 13px;
+  }
+}
+.hidden {
+  display: none;
+}/*# sourceMappingURL=ticket.css.map */

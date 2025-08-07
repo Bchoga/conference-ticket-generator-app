@@ -1,0 +1,358 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  outline: none;
+  position: relative;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/assets/fonts/static/Inconsolata-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/assets/fonts/static/Inconsolata-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/assets/fonts/static/Inconsolata-ExtraBold.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+.hero {
+  margin-top: 100px;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.hero-text-support {
+  margin-top: 25px;
+  font-size: 24px;
+  color: hsl(252, 6%, 83%);
+  text-align: center;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  color: hsl(0, 0%, 100%);
+  font-family: inconsolata, sans-serif;
+}
+
+body {
+  background: url("/assets/images/background-desktop.png") no-repeat center center/cover;
+}
+body main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: normal;
+}
+body main::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+body main::before {
+  position: fixed;
+  z-index: -9;
+  background: url("/assets/images/pattern-squiggly-line-top.svg") no-repeat top right/400px, url("/assets/images/pattern-squiggly-line-bottom-desktop.svg") no-repeat bottom left/900px;
+}
+@media (max-width: 1080px) and (min-width: 768px) {
+  body {
+    background: url("/assets/images/background-tablet.png") no-repeat center center/cover;
+  }
+  body main::before {
+    position: fixed;
+    background: url("/assets/images/pattern-squiggly-line-top.svg") no-repeat top right/300px, url("/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg") no-repeat bottom left/800px;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    background: url("/assets/images/background-mobile.png") no-repeat center center/cover;
+  }
+  body main::before {
+    background: url("/assets/images/pattern-squiggly-line-top.svg") no-repeat top right/100px, url("/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg") no-repeat bottom left/400px;
+  }
+  body .hero {
+    margin-top: 30px;
+  }
+  body .hero-text {
+    font-size: 32px;
+  }
+  body .hero-text-support {
+    font-size: 20px;
+  }
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("/assets/images/pattern-lines.svg") repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+header {
+  width: 100%;
+}
+header .header-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.hero,
+.avatar-upload-section,
+.user-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-form * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+}
+.user-form .submit-button-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle1 {
+  position: fixed;
+  top: -80px;
+  left: 30px;
+}
+
+.circle2 {
+  position: fixed;
+  top: 60vh;
+  left: 80vw;
+}
+
+.avatar-upload-section {
+  margin-top: 25px;
+  width: 100%;
+}
+.avatar-upload-section label {
+  font-size: 21px;
+}
+.avatar-upload-section .avatar-drop-zone-inner-wrapper {
+  margin-top: 8px;
+  border: dashed 1.5px hsl(245, 15%, 58%);
+  width: 40vw;
+  min-width: 280px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: hsla(245, 19%, 35%, 0.3);
+}
+.avatar-upload-section .avatar-drop-zone-inner-wrapper:hover {
+  background-color: hsla(245, 19%, 35%, 0.7);
+  transition: all ease-in-out 300ms;
+}
+
+.upload-avatar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 21px;
+}
+
+.upload-button {
+  background: hsla(245, 19%, 35%, 0.6);
+  border-radius: 12px;
+  border: none;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.upload-message {
+  margin-top: 10px;
+  color: hsl(252, 6%, 83%);
+  font-size: 18px;
+  text-align: center;
+}
+
+.info {
+  width: 40vw;
+  min-width: 280px;
+  margin-top: 10px;
+  justify-content: left;
+}
+
+.user-form {
+  margin-top: 25px;
+  width: 40vw;
+  min-width: 280px;
+}
+.user-form form {
+  width: 100%;
+}
+.user-form input {
+  margin-top: 10px;
+  border-radius: 12px;
+  line-height: 48px;
+}
+
+.name-wrapper,
+.email-wrapper,
+.github-username-wrapper {
+  width: 100%;
+  margin-top: 20px;
+}
+.name-wrapper input,
+.email-wrapper input,
+.github-username-wrapper input {
+  width: 100%;
+  background: hsla(245, 19%, 35%, 0.5);
+  color: hsl(0, 0%, 100%);
+  border: 0.1px solid hsl(252, 6%, 83%);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.name-wrapper input:hover,
+.email-wrapper input:hover,
+.github-username-wrapper input:hover {
+  background: hsla(245, 19%, 35%, 0.9);
+  transition: all ease-in-out 300ms;
+}
+.name-wrapper input::placeholder,
+.email-wrapper input::placeholder,
+.github-username-wrapper input::placeholder {
+  color: hsl(252, 6%, 83%);
+}
+
+.submit-button-wrapper {
+  width: 100%;
+  margin-top: 15px;
+}
+.submit-button-wrapper button {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: hsl(7, 88%, 67%);
+  border-radius: 12px;
+  line-height: 48px;
+  color: hsl(248, 70%, 10%);
+  font-weight: 800;
+  border: none;
+}
+.submit-button-wrapper button:hover {
+  background: hsl(7, 71%, 60%);
+  cursor: pointer;
+  box-shadow: inset 0px -5px 0px 0px hsl(7, 88%, 67%);
+  transition: all ease-in-out 300ms;
+}
+
+.email-wrapper {
+  width: 100%;
+}
+.email-wrapper input {
+  width: 100%;
+  line-height: 48px;
+}
+
+.avatar-actions-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.avatar-actions-wrapper .avatar {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.avatar-actions-wrapper .avatar img {
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.action-buttons {
+  margin-top: 5px;
+}
+
+.action-buttons button {
+  background-color: hsl(245, 19%, 35%);
+  color: hsl(252, 6%, 83%);
+  border-radius: 8px;
+  padding: 5px;
+  outline: none;
+  border: none;
+}
+.action-buttons button:hover {
+  text-decoration: underline;
+}
+
+.name-wrapper.alert input {
+  border: 0.1px solid hsl(7, 71%, 60%);
+}
+.name-wrapper.alert::after {
+  content: "ⓘ a name is required!";
+  color: hsl(7, 71%, 60%);
+}
+
+.email-wrapper.alert input {
+  border: 0.1px solid hsl(7, 71%, 60%);
+}
+.email-wrapper.alert::after {
+  content: "ⓘ a valid email is required!";
+  color: hsl(7, 71%, 60%);
+}
+
+.github-username-wrapper.alert input {
+  border: 0.1px solid hsl(7, 71%, 60%);
+}
+.github-username-wrapper.alert::after {
+  content: "ⓘ your github username is required!";
+  color: hsl(7, 71%, 60%);
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=index.css.map */

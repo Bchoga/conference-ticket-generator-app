@@ -1,0 +1,204 @@
+@import 'common';
+
+.avatar-upload-section {
+    margin-top: 25px;
+    width: 100%;
+
+    label {
+        font-size: 21px;
+    }
+
+    .avatar-drop-zone-inner-wrapper {
+        margin-top: 8px;
+        border: dashed 1.5px $neutral500;
+        width: 40vw;
+        min-width: 280px;
+        border-radius: 15px;
+        @include flexCenter(column);
+        background: hsl(245, 19%, 35%, 0.3);
+
+        &:hover {
+            background-color: hsl(245, 19%, 35%, 0.7);
+            @include smoothTransition();
+        }
+    }
+}
+
+.upload-avatar {
+    width: 100%;
+    @include flexCenter(column);
+    padding: 21px;
+}
+
+.upload-button {
+    background: hsl(245, 19%, 35%, 0.6);
+    border-radius: 12px;
+    border: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.upload-message {
+    margin-top: 10px;
+    color: $neutral300;
+    font-size: 18px;
+    text-align: center;
+}
+
+.info {
+    width: 40vw;
+    min-width: 280px;
+    margin-top: 10px;
+    justify-content: left;
+}
+
+.user-form {
+    margin-top: 25px;
+    width: 40vw;
+    min-width: 280px;
+
+    form {
+        width: 100%;
+    }
+
+    input {
+        margin-top: 10px;
+        border-radius: 12px;
+        line-height: 48px;
+    }
+}
+
+.name-wrapper,
+.email-wrapper,
+.github-username-wrapper {
+    width: 100%;
+    margin-top: 20px;
+
+    input {
+        width: 100%;
+        background: hsl(245, 19%, 35, 0.5);
+        color: $neutral0;
+        border: 0.1px solid $neutral300;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &:hover {
+            background: hsl(245, 19%, 35%, 0.9);
+            @include smoothTransition();
+        }
+
+        &::placeholder {
+            color: $neutral300;
+        }
+    }
+}
+
+
+.submit-button-wrapper {
+    width: 100%;
+    margin-top: 15px;
+
+    button {
+        width: 100%;
+        @include flexCenter(row);
+        background: $orange500;
+        border-radius: 12px;
+        line-height: 48px;
+        color: $neutral900;
+        font-weight: 800;
+        border: none;
+
+        &:hover {
+            background: $orange700;
+            cursor: pointer;
+            box-shadow: inset 0px -5px 0px 0px $orange500 ;
+            @include smoothTransition();
+        }
+    }
+}
+
+.email-wrapper {
+    width: 100%;
+
+    input {
+        width: 100%;
+        line-height: 48px;
+    }
+}
+
+.avatar-actions-wrapper {
+    @include flexCenter(column);
+    padding: 10px;
+
+    .avatar {
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        border-radius: 12px;
+
+        img {
+            border-radius: 12px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+}
+
+.action-buttons {
+    margin-top: 5px;
+}
+
+.action-buttons button {
+    background-color: $neutral700;
+    color: $neutral300;
+    border-radius: 8px;
+    padding: 5px;
+    outline: none;
+    border: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+.name-wrapper.alert {
+    input {
+        border: 0.1px solid $orange700;
+    }
+    &::after {
+        content: 'ⓘ a name is required!';
+        color: $orange700;
+    }
+}
+
+.email-wrapper.alert {
+    input {
+        border: 0.1px solid $orange700;
+    }
+    &::after {
+        content: 'ⓘ a valid email is required!';
+        color: $orange700;
+    }
+}
+
+.github-username-wrapper.alert {
+    input {
+        border: 0.1px solid $orange700;
+    }
+    &::after {
+        content: 'ⓘ your github username is required!';
+        color: $orange700;
+    }
+}
+
+
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,179 @@
+@import 'normalize';
+@import 'colors';
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('/assets/fonts/static/Inconsolata-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('/assets/fonts/static/Inconsolata-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('/assets/fonts/static/Inconsolata-ExtraBold.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@mixin flexCenter($flex-direction) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin smoothTransition {
+    transition: all ease-in-out 300ms;
+}
+
+.hero {
+    margin-top: 100px;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text-support {
+    margin-top: 25px;
+    font-size: 24px;
+    color: $neutral300;
+    text-align: center;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    color: $neutral0;
+    font-family: inconsolata, sans-serif;
+}
+
+body {
+    main {
+        height: 100%;
+        width: 100%;
+        @include flexCenter(column);
+        justify-content: normal;
+
+        // this is for the squiggly lines
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            pointer-events: none;
+        }
+    }
+
+    //Desktop
+    background: url('/assets/images/background-desktop.png') no-repeat center center/cover;
+
+    //squiggly lines
+    main::before {
+        position: fixed;
+        z-index: -9;
+        background: url('/assets/images/pattern-squiggly-line-top.svg') no-repeat top right/400px,
+            url('/assets/images/pattern-squiggly-line-bottom-desktop.svg') no-repeat bottom left/900px;
+    }
+
+    //Tablet
+    @media (max-width: 1080px) and (min-width: 768px) {
+        background: url('/assets/images/background-tablet.png') no-repeat center center/cover;
+
+        //squiggly lines
+        main::before {
+            position: fixed;
+            background: url('/assets/images/pattern-squiggly-line-top.svg') no-repeat top right/300px,
+                url('/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg') no-repeat bottom left/800px;
+        }
+
+    }
+
+    //Mobile
+    @media (max-width: 767px) {
+        // background for mobile size
+        background: url('/assets/images/background-mobile.png') no-repeat center center/cover;
+
+        main::before {
+            background: url('/assets/images/pattern-squiggly-line-top.svg') no-repeat top right/100px,
+                url('/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg') no-repeat bottom left/400px;
+        }
+
+        // hero-text
+        .hero {
+            margin-top: 30px;
+        }
+        .hero-text{
+            font-size: 32px;
+        }
+        .hero-text-support{
+            font-size:20px;
+        }
+    }
+
+    //lines
+    &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: url('/assets/images/pattern-lines.svg') repeat;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+}
+
+header {
+    width: 100%;
+
+    .header-logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+}
+
+.hero,
+.avatar-upload-section,
+.user-form {
+    width: 100%;
+    @include flexCenter(column);
+}
+
+.user-form {
+    * {
+        @include flexCenter(column);
+        align-items: flex-start;
+    }
+
+    & .submit-button-wrapper {
+        width: 100%;
+        @include flexCenter(column);
+    }
+}
+
+
+.circle1 {
+    position: fixed;
+    top: -80px;
+    left: 30px;
+}
+
+.circle2 {
+    position: fixed;
+    top: 60vh;
+    left: 80vw;
+}

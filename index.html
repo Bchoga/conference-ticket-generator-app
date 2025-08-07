@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Generator</title>
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/css/index.css">
+    <script src="scripts/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="./assets/images/logo-full.svg" alt="coding conference logo">
+        </div>
+    </header>
+
+    <!-- circles in the background -->
+    <img class="circle1" src="/assets/images/pattern-circle.svg" alt="background image of circle">
+    <img class="circle2" src="/assets/images/pattern-circle.svg" alt="background image of circle">
+     <!-- end circles in the background -->
+      
+    <main>
+        <section class="hero">
+
+            <h1 class="hero-text">
+                Your Journey to Coding Conf 2025 Starts Here!
+            </h1>
+
+            <p class="hero-text-support">
+                Secure your spot at next year's biggest coding conferences.
+            </p>
+
+        </section>
+
+        <section class="avatar-upload-section">
+            <label for="avatar-drop-zone"> Upload Avatar
+              
+                    <div class="avatar-drop-zone-inner-wrapper">
+                        <input type="file" name="avatar-drop-zone" id="avatar-drop-zone" accept="image"
+                            style="display: none;">
+
+                        <!-- this is shown before avatar is uploaded -->
+                        <div class="upload-avatar">
+                            <button class="upload-button">
+                                <img src="./assets/images/icon-upload.svg" alt="upload icon">
+                            </button>
+                            <p class="upload-message">
+                                Drag and drop or click to upload
+                            </p>
+                        </div>
+
+                        <!-- to be shown after avatar has been uploaded -->
+                        <div class="avatar-actions-wrapper hidden">
+                            <div class="avatar">
+                                <img src="./assets/images/image-avatar.jpg" alt="image of user avatar" id="user-avatar">
+                            </div>
+                            <div class="action-buttons">
+                                <button id="removeImage">Remove image</button>
+                                <button id="changeImage">Change image</button>
+                            </div>
+                        </div>
+
+                    </div>
+            
+            </label>
+
+            <div class="info">
+                <p class="info-text"> ⓘ Upload your photo (JPG or PNG, max size: 500KB).</p>
+            </div>
+            
+        </section>
+
+        <section class="user-form">
+            <form>
+
+                <div class="name-wrapper">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+
+                <div class="email-wrapper">
+                    <label for="email">Email Address</label>
+                    <input type="text" name="email" id="email" placeholder="example@email.com" >
+                </div>
+
+                <div class="github-username-wrapper">
+                    <label for="username">GitHub Username</label>
+                    <input type="text" name="username" id="username" placeholder="@yourusername" >
+                </div>
+
+                <div class="submit-button-wrapper">
+                    <button id="submit">Generate My Ticket</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
