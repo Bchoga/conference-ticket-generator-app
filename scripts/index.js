@@ -110,6 +110,6 @@ function handleSubmit(event, docElements){
         sessionStorage.setItem('userName', docElements.userName.value);
     }
     //if everything is ok go to ticket page
-    window.location = '/pages/ticket.html';
+    window.location = '/conference-ticket-generator-app/pages/ticket.html';
 }
 
